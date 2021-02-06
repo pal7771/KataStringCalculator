@@ -11,4 +11,9 @@ public class TestKataCalculator {
         assertEquals( calculator.Add(""), 0);
 
     }
+
+    public void singleValueIsReplied(){
+        Calculator calculator = new Calculator();
+        assertEquals( calculator.Add("1"), 1);
+    }
 }
