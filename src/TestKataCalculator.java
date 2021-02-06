@@ -21,4 +21,9 @@ public class TestKataCalculator {
         Calculator calculator = new Calculator();
         assertEquals( calculator.Add("1,2"), 3);
     }
+
+    public void twoValueStringSumNewLineSeparated(){
+        Calculator calculator = new Calculator();
+        assertEquals( calculator.Add("1\n2"), 3);
+    }
 }
