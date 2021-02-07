@@ -12,6 +12,9 @@ public class Calculator {
             numbers = numbers.replaceAll(",", " ");
             numbers = numbers.replaceAll("//", " ");
             numbers = numbers.replaceAll(";", " ");
+            numbers = numbers.replaceAll("\\*", " ");
+            numbers = numbers.replaceAll("\\[", " ");
+            numbers = numbers.replaceAll("]", " ");
 
             System.out.println( numbers );
 
