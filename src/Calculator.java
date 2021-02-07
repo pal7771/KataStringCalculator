@@ -27,7 +27,8 @@ public class Calculator {
                     if( value < 0 ){
                         values.add( value );
                     } else {
-                        sum += Integer.parseInt(s.trim());
+                        if( value <= 1000 )
+                            sum += Integer.parseInt(s.trim());
                     }
                 }
             }
