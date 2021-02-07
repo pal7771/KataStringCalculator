@@ -59,4 +59,9 @@ public class TestKataCalculator {
 
         assertEquals( calculator.Add("2,1002"), 2);
     }
+
+    public void delimitersCanBeOfAnyLength() throws Exception {
+        Calculator calculator = new Calculator();
+        assertEquals( calculator.Add("//[***]\n1***2***3"), 6);
+    }
 }
