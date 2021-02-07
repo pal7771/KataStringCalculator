@@ -1,5 +1,6 @@
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
+import static org.testng.AssertJUnit.fail;
 
 @Test
 public class TestKataCalculator {
@@ -40,5 +41,16 @@ public class TestKataCalculator {
     public void supportDifferentDelimiters(){
         Calculator calculator = new Calculator();
         assertEquals( calculator.Add("//;\n1;2"), 3);
+    }
+
+    public void negativeNumberException(){
+        Calculator calculator = new Calculator();
+
+        try {
+            int sum = calculator.Add("-1,-2,4,3");
+            fail("No exception thrown!");
+        } catch (Exception e) {
+            assertEquals(e.getMessage(), "negatives not allowed");
+        }
     }
 }
