@@ -6,39 +6,39 @@ import static org.testng.AssertJUnit.fail;
 public class TestKataCalculator {
 
     //emtpy string should return zero
-    public void emptyStringReturnsZero(){
+    public void emptyStringReturnsZero() throws Exception {
 
         Calculator calculator = new Calculator();
         assertEquals( calculator.Add(""), 0);
 
     }
 
-    public void singleValueIsReplied(){
+    public void singleValueIsReplied() throws Exception {
         Calculator calculator = new Calculator();
         assertEquals( calculator.Add("1"), 1);
     }
 
-    public void twoValueStringSum(){
+    public void twoValueStringSum() throws Exception {
         Calculator calculator = new Calculator();
         assertEquals( calculator.Add("1,2"), 3);
     }
 
-    public void twoValueStringSumNewLineSeparated(){
+    public void twoValueStringSumNewLineSeparated() throws Exception {
         Calculator calculator = new Calculator();
         assertEquals( calculator.Add("1\n2"), 3);
     }
 
-    public void getSumOfUnknownAmountOfNumbers(){
+    public void getSumOfUnknownAmountOfNumbers() throws Exception {
         Calculator calculator = new Calculator();
         assertEquals( calculator.Add("1,2,3,4,5"), 15);
         assertEquals( calculator.Add("1,2,3,4,5,4"), 19);
     }
-    public void handleNewLinesBetweenNumbers(){
+    public void handleNewLinesBetweenNumbers() throws Exception {
         Calculator calculator = new Calculator();
         assertEquals( calculator.Add("1\n2,3"), 6);
     }
 
-    public void supportDifferentDelimiters(){
+    public void supportDifferentDelimiters() throws Exception {
         Calculator calculator = new Calculator();
         assertEquals( calculator.Add("//;\n1;2"), 3);
     }
@@ -50,7 +50,7 @@ public class TestKataCalculator {
             int sum = calculator.Add("-1,-2,4,3");
             fail("No exception thrown!");
         } catch (Exception e) {
-            assertEquals(e.getMessage(), "negatives not allowed");
+            assertEquals(e.getMessage(), "negatives not allowed ( -1 -2 )");
         }
     }
 }
