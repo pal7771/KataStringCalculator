@@ -32,4 +32,8 @@ public class TestKataCalculator {
         assertEquals( calculator.Add("1,2,3,4,5"), 15);
         assertEquals( calculator.Add("1,2,3,4,5,4"), 19);
     }
+    public void handleNewLinesBetweenNumbers(){
+        Calculator calculator = new Calculator();
+        assertEquals( calculator.Add("1\n2,3"), 6);
+    }
 }
