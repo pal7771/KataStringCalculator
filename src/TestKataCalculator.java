@@ -53,4 +53,10 @@ public class TestKataCalculator {
             assertEquals(e.getMessage(), "negatives not allowed ( -1 -2 )");
         }
     }
+
+    public void numbersBiggerThan1000() throws Exception {
+        Calculator calculator = new Calculator();
+
+        assertEquals( calculator.Add("2,1002"), 2);
+    }
 }
