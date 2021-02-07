@@ -67,6 +67,6 @@ public class TestKataCalculator {
 
     public void allowMultipleDelimiters() throws Exception {
         Calculator calculator = new Calculator();
-        assertEquals( calculator.Add("//[*][%]\\n1*2%3"), 6);
+        assertEquals( calculator.Add("//[*][%]\n1*2%3"), 6);
     }
 }

@@ -4,17 +4,24 @@ import java.util.List;
 
 public class Calculator {
 
+    public String removeDelimeters( String numbers){
+        numbers = numbers.replaceAll("\n", " ");
+        numbers = numbers.replaceAll(",", " ");
+        numbers = numbers.replaceAll("//", " ");
+        numbers = numbers.replaceAll(";", " ");
+        numbers = numbers.replaceAll("\\*", " ");
+        numbers = numbers.replaceAll("\\[", " ");
+        numbers = numbers.replaceAll("]", " ");
+        numbers = numbers.replaceAll("%", " ");
+
+        return numbers;
+    }
     public int Add(String numbers) throws Exception {
         if( numbers.length() == 0)
             return 0;
         else {
-            numbers = numbers.replaceAll("\n", " ");
-            numbers = numbers.replaceAll(",", " ");
-            numbers = numbers.replaceAll("//", " ");
-            numbers = numbers.replaceAll(";", " ");
-            numbers = numbers.replaceAll("\\*", " ");
-            numbers = numbers.replaceAll("\\[", " ");
-            numbers = numbers.replaceAll("]", " ");
+
+            numbers = removeDelimeters( numbers );
 
             System.out.println( numbers );
 
