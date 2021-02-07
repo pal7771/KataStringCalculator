@@ -36,4 +36,9 @@ public class TestKataCalculator {
         Calculator calculator = new Calculator();
         assertEquals( calculator.Add("1\n2,3"), 6);
     }
+
+    public void supportDifferentDelimiters(){
+        Calculator calculator = new Calculator();
+        assertEquals( calculator.Add("//;\\n1;2"), 3);
+    }
 }
